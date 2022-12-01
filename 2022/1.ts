@@ -12,8 +12,8 @@ for (let i = 0; i < elvesCaloriesRaw.length; i++) {
 
 const totalsDesc = elvesTotals.sort().reverse()
 
-const max = totalsDesc[0]
+const maxValue = totalsDesc[0]
 const totalTop3 = totalsDesc.splice(0, 3).reduce((acc, value) => acc + value)
 
-console.log("Max:", max)
-console.log("Top 3 Sum:", totalTop3)
+console.log("Max:", maxValue) // part 1
+console.log("Top 3 Sum:", totalTop3) // part 2
