@@ -1,11 +1,12 @@
-const input = await Deno.readTextFile("./input.txt")
+const input = await Deno.readTextFile("./input/1.txt")
 
 let max = 0
-const elvesRaw = input.split("\n\n")
+const elvesCaloriesRaw = input.split("\n\n")
 
-for (let i = 0; i < elvesRaw.length; i++) {
-  const elf = elvesRaw[i].split("\n")
-  const sum = elf.map((item) => parseInt(item)).reduce((acc, value) => acc + value)
+for (let i = 0; i < elvesCaloriesRaw.length; i++) {
+  const elfCalories = elvesCaloriesRaw[i].split("\n")
+  const elfCaloriesTotals = elfCalories.map((item) => parseInt(item))
+  const sum = elfCaloriesTotals.reduce((acc, value) => acc + value)
   if (sum > max) max = sum
 }
 
